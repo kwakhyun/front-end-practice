@@ -1,4 +1,4 @@
-const day = 0;
+const day = 5;
 let weekend = "";
 
 switch (day) {
@@ -30,3 +30,4 @@ switch (day) {
 }
 
 console.log(weekend);
+// 금
