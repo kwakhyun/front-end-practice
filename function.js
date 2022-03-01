@@ -62,3 +62,67 @@ function max(x, y) {
 console.log(max(10, 20)); // 20
 console.log(max(30, 40)); // 40
 console.log(max(100, 50)); // 100
+
+function add_1(x, y) {
+  return x + y;
+}
+
+const add_2 = function (x, y) {
+  return x + y;
+};
+
+const add_3 = (x, y) => x + y;
+
+const add_4 = add_1;
+
+console.log(add_4(100, 100)); // 200
+console.log(add_1 === add_4); // true
+console.log(add_1 === add_2); // false
+
+// console.log(Object.getOwnPropertyDescriptors(add_1));
+// console.log(Object.getOwnPropertyDescriptors(add_2));
+// console.log(Object.getOwnPropertyDescriptors(add_3));
+// console.log(Object.getOwnPropertyDescriptors(add_4)); // value: 'add_1'
+
+let list = [
+  "kh",
+  26,
+  function hello() {
+    console.log("list hello");
+  },
+];
+
+let obj = {
+  name: "kh",
+  age: "26",
+  hello() {
+    console.log("obj hello");
+  },
+};
+
+list[2](); // list hello
+obj.hello(); // obj hello
+
+const nice = () => console.log("nice");
+const hi = () => console.log("hi");
+
+nice(); // nice
+hi(); // hi
+obj.hello = nice;
+obj.hello(); // nice
+obj.hello = hi;
+obj.hello(); // hi
+
+let user = { name: "kwak" };
+let admin = { name: "hyun" };
+
+function hello_func() {
+  console.log("hello " + this.name);
+}
+
+user.func = hello_func;
+admin.func = hello_func;
+
+user.func(); // hello kwak
+admin.func(); // hello hyun
+user["func"](); // hello kwak
