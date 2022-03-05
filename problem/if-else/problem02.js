@@ -6,7 +6,7 @@ function answer(a, b, c, d) {
   else if (a / b === c / d) return (result = 0);
   else if (a / b < c / d) return (result = -1);
 
-  // a / b > c / d ? (result = 1) : a / b < c / d ? (result = -1) : (result = 0);
+  // result = a / b > c / d ? 1 : a / b < c / d ? -1 : 0;
 
   return result;
 }
