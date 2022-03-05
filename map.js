@@ -1,4 +1,4 @@
-// Collection - Map
+// Map
 let map = new Map();
 
 map.set("name", "kh");

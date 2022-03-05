@@ -1,4 +1,4 @@
-// Collection - Set
+// Set
 let set = new Set();
 let num = new Set([1, 2, 3, 4, 5]);
 let str = new Set("hello");

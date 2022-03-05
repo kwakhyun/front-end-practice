@@ -1,4 +1,4 @@
-// Collection - Math
+// Math
 console.log(Math.max(1, -1)); // 1
 console.log(Math.min(1, -1)); // -1
 
