@@ -93,5 +93,5 @@ function recursive4(number) {
   return recursive4(number - 1) + recursive4(number - 2);
 }
 
-result = recursive4(7); // 13
-console.log(result);
+result = recursive4(7);
+console.log(result); // 13
