@@ -2,7 +2,16 @@
 function answer(a, d, n) {
   let index = -1;
 
+  //   for (let i = 1; a <= n; i++) {
+  //     if (a === n) {
+  //       index = i;
+  //     }
+  //     a += d;
+  //   }
 
+  if ((n - a) % d == 0) {
+    index = (n - a) / d + 1;
+  }
 
   return index;
 }
@@ -20,3 +29,7 @@ let input = [
 for (let i = 0; i < input.length; i++) {
   console.log(`#${i + 1} ${answer(input[i][0], input[i][1], input[i][2])}`);
 }
+
+// #1 4
+// #2 -1
+// #3 5
