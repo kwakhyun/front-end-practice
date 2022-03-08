@@ -135,3 +135,37 @@ console.log(str_separator); // apple;mango;kiwi;orange
 
 let result = str_separator.split(";");
 console.log(result); // [ 'apple', 'mango', 'kiwi', 'orange' ]
+
+// some
+let users = [
+  { name: "kh1", age: 21, job: false },
+  { name: "kh2", age: 22, job: false },
+  { name: "kh3", age: 23, job: true },
+];
+
+let some_job = users.some((user) => {
+  return user.job == false;
+});
+console.log(some_job); // true
+
+let some_age = users.some((user) => {
+  return user.age < 20;
+});
+console.log(some_job); // true
+
+let some_empty = [].some((item) => item < 10);
+console.log(some_empty); // false
+
+// every
+let every_job = users.every((user) => {
+  return user.job == false;
+});
+console.log(every_job); // false
+
+let every_age = users.every((user) => {
+  return user.age < 20;
+});
+console.log(every_age); // false
+
+let every_empty = [].every((item) => item < 10);
+console.log(every_empty); // true
