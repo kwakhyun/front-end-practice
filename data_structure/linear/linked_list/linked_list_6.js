@@ -116,6 +116,28 @@ LinkedList.prototype.removeAt = function (position = 0) {
   return current.data;
 };
 
+// value 값을 갖는 node 위치 반환
+LinkedList.prototype.indexOf = function (value) {
+  let current = this.head,
+    index = 0;
+
+  while (current != null) {
+    if (current.data === value) {
+      return index;
+    }
+    index++;
+    current = current.next;
+  }
+
+  return -1;
+};
+
+// indexOf + removeAt = remove
+LinkedList.prototype.remove2 = function (value) {
+  let index = this.indexOf(value);
+  return this.removeAt(index);
+};
+
 let ll = new LinkedList();
 
 ll.append(1);
@@ -126,13 +148,18 @@ ll.insert(5, 2);
 ll.insert(9, 0);
 ll.printNode(); // 9 -> 1 -> 4 -> 5 -> 2 -> 3 -> null
 
-console.log(ll.removeAt(9)); // null
+console.log(ll.indexOf(10)); // -1
+console.log(ll.indexOf(9)); // 0
+console.log(ll.indexOf(5)); // 3
+console.log(ll.indexOf(4)); // 2
+
+console.log(ll.remove2(10)); // null
 ll.printNode(); // 9 -> 1 -> 4 -> 5 -> 2 -> 3 -> null
-console.log(ll.removeAt(2)); // 4
-ll.printNode(); // 9 -> 1 -> 5 -> 2 -> 3 -> null
-console.log(ll.removeAt()); // 9
-ll.printNode(); // 1 -> 5 -> 2 -> 3 -> null
-console.log(ll.removeAt(1)); // 5
+console.log(ll.remove2(9)); // 9
+ll.printNode(); // 1 -> 4 -> 5 -> 2 -> 3 -> null
+console.log(ll.remove2(5)); // 5
+ll.printNode(); // 1 -> 4 -> 2 -> 3 -> null
+console.log(ll.remove2(4)); // 3
 ll.printNode(); // 1 -> 2 -> 3 -> null
 
 console.log(ll.size()); // 3
