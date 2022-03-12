@@ -91,6 +91,32 @@ LinkedList.prototype.remove = function (value) {
   return current.data;
 };
 
+// position 위치의 node 삭제
+LinkedList.prototype.removeAt = function (position = 0) {
+  if (position < 0 || position >= this.length) {
+    return null;
+  }
+
+  let current = this.head,
+    index = 0,
+    prev;
+
+  if (position === 0) {
+    this.head = current.next;
+  } else {
+    while (index++ < position) {
+      prev = current;
+      current = current.next;
+    }
+
+    prev.next = current.next;
+  }
+
+  this.length--;
+
+  return current.data;
+};
+
 let ll = new LinkedList();
 
 ll.append(1);
@@ -101,13 +127,13 @@ ll.insert(5, 2);
 ll.insert(9, 0);
 ll.printNode(); // 9 -> 1 -> 4 -> 5 -> 2 -> 3 -> null
 
-console.log(ll.remove(10)); // null
+console.log(ll.removeAt(9)); // null
 ll.printNode(); // 9 -> 1 -> 4 -> 5 -> 2 -> 3 -> null
-console.log(ll.remove(9)); // 9
-ll.printNode(); // 1 -> 4 -> 5 -> 2 -> 3 -> null
-ll.remove(1);
-ll.remove(2);
-ll.remove(3);
-ll.printNode(); // 4 -> 5 -> null
+console.log(ll.removeAt(2)); // 4
+ll.printNode(); // 9 -> 1 -> 5 -> 2 -> 3 -> null
+console.log(ll.removeAt()); // 9
+ll.printNode(); // 1 -> 5 -> 2 -> 3 -> null
+console.log(ll.removeAt(1)); // 5
+ll.printNode(); // 1 -> 2 -> 3 -> null
 
-console.log(ll.size()); // 2
+console.log(ll.size()); // 3
