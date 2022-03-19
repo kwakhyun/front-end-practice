@@ -1,4 +1,4 @@
-const HASH_SIZE = 37;
+const HASH_SIZE = 1013;
 
 function Element(key, value) {
   this.key = key;
@@ -10,11 +10,11 @@ function HashTable() {
   this.length = 0;
 }
 
-// 입력 key 값을 index로 출력하는 해시 함수 - loselose
+// 해시 함수 - djb2
 HashTable.prototype.hashCode = function (key) {
-  let hash = 0;
+  let hash = 5381; // seed
   for (let i = 0; i < key.length; i++) {
-    hash += key.charCodeAt(i);
+    hash = hash * 33 + key.charCodeAt(i);
   }
   return hash % HASH_SIZE;
 };
@@ -88,22 +88,15 @@ HashTable.prototype.print = function () {
 
 let ht = new HashTable();
 
-ht.put("key1", "value1");
-ht.put("key3", "value3");
-ht.put("key5", "value5");
+// 충돌 해결 - djb2
+console.log(ht.put("Ana", "value1")); // true
+console.log(ht.put("Donnie", "value2")); // true
+console.log(ht.put("Sue", "value3")); // true
+console.log(ht.put("Jamie", "value4")); // true
 
+console.log(ht.size()); // 4
 ht.print();
-// 8 -> key: key1, value: value1
-// 10 -> key: key3, value: value3
-// 12 -> key: key5, value: value5
-
-console.log(ht.getBuffer());
-// [
-//     Element { key: 'key1', value: 'value1' },
-//     Element { key: 'key3', value: 'value3' },
-//     Element { key: 'key5', value: 'value5' }
-//   ]
-
-console.log(ht.size()); // 3
-ht.clear();
-console.log(ht); // HashTable { table: [ <37 empty items> ], length: 0 }
+// 278 -> key: Donnie, value: value2
+// 502 -> key: Sue, value: value3
+// 925 -> key: Ana, value: value1
+// 962 -> key: Jamie, value: value4

@@ -88,22 +88,13 @@ HashTable.prototype.print = function () {
 
 let ht = new HashTable();
 
-ht.put("key1", "value1");
-ht.put("key3", "value3");
-ht.put("key5", "value5");
+// 충돌 문제 - loselose
+console.log(ht.put("Ana", "value1")); // true
+console.log(ht.put("Donnie", "value2")); // false
+console.log(ht.put("Sue", "value3")); // true
+console.log(ht.put("Jamie", "value4")); // false
 
+console.log(ht.size()); // 2
 ht.print();
-// 8 -> key: key1, value: value1
-// 10 -> key: key3, value: value3
-// 12 -> key: key5, value: value5
-
-console.log(ht.getBuffer());
-// [
-//     Element { key: 'key1', value: 'value1' },
-//     Element { key: 'key3', value: 'value3' },
-//     Element { key: 'key5', value: 'value5' }
-//   ]
-
-console.log(ht.size()); // 3
-ht.clear();
-console.log(ht); // HashTable { table: [ <37 empty items> ], length: 0 }
+// 5 -> key: Sue, value: value3
+// 13 -> key: Ana, value: value1

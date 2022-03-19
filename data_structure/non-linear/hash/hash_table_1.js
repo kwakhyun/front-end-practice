@@ -1,4 +1,4 @@
-const HASH_SIZE = 100;
+const HASH_SIZE = 37;
 
 function Element(key, value) {
   this.key = key;
@@ -19,8 +19,8 @@ HashTable.prototype.hashCode = function (key) {
 };
 
 let ht = new HashTable();
-console.log(ht); // HashTable { table: [ <100 empty items> ], length: 0 }
+console.log(ht); // HashTable { table: [ <37 empty items> ], length: 0 }
 
-console.log(ht.hashCode("Hello")); // 0
-console.log(ht.hashCode("World")); // 20
-console.log(ht.hashCode("Hello World")); // 52
+console.log(ht.hashCode("Hello")); // 19
+console.log(ht.hashCode("World")); // 2
+console.log(ht.hashCode("Hello World")); // 16

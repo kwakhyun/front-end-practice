@@ -1,4 +1,4 @@
-const HASH_SIZE = 100;
+const HASH_SIZE = 37;
 
 function Element(key, value) {
   this.key = key;
@@ -10,7 +10,7 @@ function HashTable() {
   this.length = 0;
 }
 
-// 입력 key 값을 index로 출력하는 해시 함수 (loselosehash)
+// 입력 key 값을 index로 출력하는 해시 함수 - loselose
 HashTable.prototype.hashCode = function (key) {
   let hash = 0;
   for (let i = 0; i < key.length; i++) {
