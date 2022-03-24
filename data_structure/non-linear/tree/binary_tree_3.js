@@ -43,6 +43,36 @@ BinaryTree.prototype.preOrderTraverse = function (callback) {
   this.preOrderTraverseNode(this.root, callback);
 };
 
+// 재귀적으로 트리를 중위 순회
+BinaryTree.prototype.inOrderTraverseNode = function (node, callback) {
+  if (node === null) {
+    return;
+  }
+  this.inOrderTraverseNode(node.left, callback);
+  callback(node);
+  this.inOrderTraverseNode(node.right, callback);
+};
+
+// 중위 순회하며 node 출력
+BinaryTree.prototype.inOrderTraverse = function (callback) {
+  this.inOrderTraverseNode(this.root, callback);
+};
+
+// 재귀적으로 트리를 후위 순회
+BinaryTree.prototype.postOrderTraverseNode = function (node, callback) {
+  if (node === null) {
+    return;
+  }
+  this.postOrderTraverseNode(node.left, callback);
+  this.postOrderTraverseNode(node.right, callback);
+  callback(node);
+};
+
+// 후위 순회하며 node 출력
+BinaryTree.prototype.postOrderTraverse = function (callback) {
+  this.postOrderTraverseNode(this.root, callback);
+};
+
 let tree = new BinaryTree();
 
 tree.insert("F");
@@ -68,5 +98,14 @@ function printNode(node) {
   process.stdout.write(`${node.value} -> `);
 }
 
+console.log("\npreOrderTraverse");
 tree.preOrderTraverse(printNode);
 console.log("end"); // F -> B -> A -> D -> C -> E -> G -> I -> H -> end
+
+console.log("\ninOrderTraverse");
+tree.inOrderTraverse(printNode);
+console.log("end"); // A -> B -> C -> D -> E -> F -> G -> H -> I -> end
+
+console.log("\npostOrderTraverse");
+tree.postOrderTraverse(printNode);
+console.log("end"); // A -> C -> E -> D -> B -> H -> I -> G -> F -> end
