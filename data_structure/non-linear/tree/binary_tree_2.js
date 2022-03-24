@@ -28,16 +28,17 @@ BinaryTree.prototype.insert = function (value) {
   this.root = this.insertNode(this.root, value);
 };
 
+// 재귀적으로 트리를 순회하며 전위 순회
 BinaryTree.prototype.preOrderTraverseNode = function (node, callback) {
   if (node === null) {
     return;
   }
-
   callback(node);
   this.preOrderTraverseNode(node.left, callback);
   this.preOrderTraverseNode(node.right, callback);
 };
 
+// 전위 순회하며 node 출력
 BinaryTree.prototype.preOrderTraverse = function (callback) {
   this.preOrderTraverseNode(this.root, callback);
 };
@@ -55,10 +56,17 @@ tree.insert("I");
 tree.insert("H");
 
 console.log(tree);
+// BinaryTree {
+//   root: Node {
+//     value: 'F',
+//     left: Node { value: 'B', left: [Node], right: [Node] },
+//     right: Node { value: 'G', left: null, right: [Node] }
+//   }
+// }
 
 function printNode(node) {
-  process.stdout.write(node.value + " ");
+  process.stdout.write(`${node.value} -> `);
 }
 
 tree.preOrderTraverse(printNode);
-console.log("end"); // F B A D C E G I H end
+console.log("end"); // F -> B -> A -> D -> C -> E -> G -> I -> H -> end
