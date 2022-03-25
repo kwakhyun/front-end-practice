@@ -160,19 +160,19 @@ function printNode(node) {
 }
 
 tree.inOrderTraverse(printNode); // A -> B -> C -> D -> E -> F -> G -> H -> I -> end
-tree.remove("A");
-tree.inOrderTraverse(printNode); // B -> C -> D -> E -> F -> G -> H -> I -> end
-tree.remove("B");
-tree.inOrderTraverse(printNode); // C -> D -> E -> F -> G -> H -> I -> end
 tree.remove("I");
-tree.inOrderTraverse(printNode); // C -> D -> E -> F -> G -> H -> end 
+tree.inOrderTraverse(printNode); // A -> B -> C -> D -> E -> F -> G -> H -> end
+tree.remove("B");
+tree.inOrderTraverse(printNode); // A -> C -> D -> E -> F -> G -> H -> end
+tree.remove("D");
+tree.inOrderTraverse(printNode); // A -> C -> E -> F -> G -> H -> end
 
 console.log(tree.root);
 // Node {
 //   value: 'F',
 //   left: Node {
-//     value: 'D',
-//     left: Node { value: 'C', left: null, right: null },
+//     value: 'C',
+//     left: Node { value: 'A', left: null, right: null },
 //     right: Node { value: 'E', left: null, right: null }
 //   },
 //   right: Node {
