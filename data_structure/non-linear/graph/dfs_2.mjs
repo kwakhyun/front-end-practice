@@ -1,3 +1,5 @@
+import { Stack } from "./stack.mjs";
+
 // 깊이 우선 탐색 - DFS (Depth First Search)
 function Graph() {
   this.edge = {};
@@ -31,7 +33,8 @@ Graph.prototype.print = function () {
 
 // DFS
 Graph.prototype.dfs = function (startVertex) {
-  this.dfsRecursiveVisit(startVertex);
+  // this.dfsRecursiveVisit(startVertex);
+  this.dfsLoopVisit(startVertex);
 };
 
 // DFS 재귀 호출
@@ -43,6 +46,24 @@ Graph.prototype.dfsRecursiveVisit = function (vertex) {
   let neighbors = this.edge[vertex];
   for (let i = 0; i < neighbors.length; i++) {
     this.dfsRecursiveVisit(neighbors[i]);
+  }
+};
+
+// 스택을 이용한 DFS
+Graph.prototype.dfsLoopVisit = function (vertex) {
+  let stack = new Stack();
+  stack.push(vertex);
+
+  while (!stack.isEmpty()) {
+    let v = stack.pop();
+    if (this.visited[v]) continue;
+    this.visited[v] = true;
+    console.log(v);
+
+    let neighbors = this.edge[v];
+    for (let i = neighbors.length - 1; i >= 0; i--) {
+      stack.push(neighbors[i]);
+    }
   }
 };
 
@@ -69,5 +90,5 @@ graph.print();
 // D -> G H
 // E -> I
 
-// 재귀 호출을 이용한 DFS
-graph.dfs("A"); // A B C D G H E F I
+// 스택을 이용한 DFS
+graph.dfs("A"); // A B C G D H E F I
