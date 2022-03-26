@@ -52,16 +52,18 @@ Graph.prototype.dfsRecursiveVisit = function (vertex) {
 // 스택을 이용한 DFS
 Graph.prototype.dfsLoopVisit = function (vertex) {
   let stack = new Stack();
-  stack.push(vertex);
+  stack.push(vertex); // 시작 노드를 스택에 삽입
 
   while (!stack.isEmpty()) {
+    // 스택이 비어있지 않을 때까지 반복
     let v = stack.pop();
-    if (this.visited[v]) continue;
-    this.visited[v] = true;
+    if (this.visited[v]) continue; // 아직 방문하지 않은 vertex
+    this.visited[v] = true; // 방문 처리
     console.log(v);
 
     let neighbors = this.edge[v];
     for (let i = neighbors.length - 1; i >= 0; i--) {
+      // 인접한 모든 정점을 스택에 삽입
       stack.push(neighbors[i]);
     }
   }

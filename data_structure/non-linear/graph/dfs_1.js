@@ -36,12 +36,13 @@ Graph.prototype.dfs = function (startVertex) {
 
 // DFS 재귀 호출
 Graph.prototype.dfsRecursiveVisit = function (vertex) {
-  if (this.visited[vertex]) return;
-  this.visited[vertex] = true;
-  console.log(vertex);
+  if (this.visited[vertex]) return; // 이미 방문한 vertex
+  this.visited[vertex] = true; // 방문 처리
+  console.log(vertex); // 방문한 vertex 출력
 
-  let neighbors = this.edge[vertex];
+  let neighbors = this.edge[vertex]; // vertex에 연결된 모든 vertex를 얻음
   for (let i = 0; i < neighbors.length; i++) {
+    // 방문하지 않은 vertex를 찾아서 방문
     this.dfsRecursiveVisit(neighbors[i]);
   }
 };
