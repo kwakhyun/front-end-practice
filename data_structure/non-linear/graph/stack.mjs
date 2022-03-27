@@ -54,10 +54,3 @@ Stack.prototype.includes = function (element, position = 0) {
 };
 
 let stack = new Stack([1, 2, 3]);
-
-console.log(stack.indexOf(1)); // 0
-console.log(stack.indexOf(2)); // 1
-console.log(stack.indexOf(1, 2)); // -1
-
-console.log(stack.includes(3)); // true
-console.log(stack.includes(4)); // false

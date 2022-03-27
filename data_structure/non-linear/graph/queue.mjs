@@ -41,12 +41,3 @@ Queue.prototype.clear = function () {
 };
 
 let queue = new Queue([1, 2, 3, 4]);
-
-queue.dequeue();
-console.log(queue); // Queue { array: [ 2, 3, 4 ] }
-console.log(queue.front()); // 2
-
-console.log(queue.size()); // 3
-queue.clear();
-console.log(queue); // Queue { array: [] }
-console.log(queue.size()); // 0
