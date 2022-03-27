@@ -37,7 +37,7 @@ Graph.prototype.bfs = function (startVertex) {
   this.bfsLoopVisit(startVertex);
 };
 
-// 큐를 이용한 BFS - 최단 경로 탐색
+// 큐를 이용한 BFS - 최단 경로 비용 산출
 Graph.prototype.bfsShortestPath = function (vertex) {
   let queue = new Queue();
   queue.enqueue(vertex);
@@ -52,7 +52,7 @@ Graph.prototype.bfsShortestPath = function (vertex) {
   while (!queue.isEmpty()) {
     let v = queue.dequeue();
     this.visited[v] = true;
-    console.log(v);
+    // console.log(v);
 
     let neighbors = this.edge[v];
     for (let i = 0; i < neighbors.length; i++) {
@@ -90,10 +90,8 @@ Graph.prototype.fromToPath = function (previous, startVertex, endVertex) {
 // 최단 경로 탐색
 Graph.prototype.shortestPath = function (startVertex) {
   let result = this.bfsShortestPath(startVertex);
-
-  console.log(result.distance);
-  console.log(result.previous);
-
+  // console.log(result.distance);
+  // console.log(result.previous);
   for (let vertex in this.edge) {
     if (vertex === startVertex) continue;
     this.fromToPath(result.previous, startVertex, vertex);
