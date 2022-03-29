@@ -65,6 +65,32 @@ Heap.prototype.bubbleUp = function () {
   }
 };
 
+// root 노드 반환 및 삭제
+Heap.prototype.extractMin = function () {
+  let min = this.items[0];
+  this.items[0] = this.items[this.size() - 1];
+  this.items.pop();
+  this.bubbleDown();
+  return min;
+};
+
+// 대체된 root 노드 위치 정렬
+Heap.prototype.bubbleDown = function () {
+  let index = 0;
+  while (
+    this.getLeftChild(index) &&
+    (this.getLeftChild(index) < this.items[index] ||
+      this.getRightChild(index) < this.items[index])
+  ) {
+    let childIndex =
+      this.getLeftChild(index) < this.getRightChild(index)
+        ? this.leftChildIndex(index)
+        : this.rightChildIndex(index);
+    this.swap(index, childIndex);
+    index = childIndex;
+  }
+};
+
 let minHeap = new Heap();
 
 minHeap.insert(50);
@@ -74,15 +100,15 @@ minHeap.insert(7);
 minHeap.insert(12);
 minHeap.insert(2);
 minHeap.insert(8);
-console.log(minHeap);
-// Heap { items: [
-//   2, 10, 7, 50,
-//  12, 15, 8
-// ] }
-
 minHeap.insert(5);
-console.log(minHeap);
-// Heap { items: [
+console.log(minHeap.items);
+// [
 //   2,  5, 7, 10,
 //  12, 15, 8, 50
-// ] }
+// ]
+
+console.log(minHeap.extractMin()); // 2
+console.log(minHeap.extractMin()); // 5
+console.log(minHeap.extractMin()); // 7
+console.log(minHeap.extractMin()); // 8
+console.log(minHeap.items); // [ 10, 12, 15, 50 ]
