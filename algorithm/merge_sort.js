@@ -23,24 +23,13 @@ let mergeSort = function (arr, compare) {
     j = 0,
     k = 0;
   while (i < left.length && j < right.length) {
-    if (compare(left[i], right[j])) {
-      arr[k] = left[i];
-      i++;
-    } else {
-      arr[k] = right[j];
-      j++;
-    }
-    k++;
+    arr[k++] = compare(left[i], right[j]) ? right[j++] : left[i++];
   }
   while (i < left.length) {
-    arr[k] = left[i];
-    i++;
-    k++;
+    arr[k++] = left[i++];
   }
   while (j < right.length) {
-    arr[k] = right[j];
-    j++;
-    k++;
+    arr[k++] = right[j++];
   }
   
   return arr;
@@ -58,3 +47,7 @@ for (let i = 0; i < sorting.length; i++) {
     console.log(array);
   }
 }
+// mergeSort ascending
+// [ 1, 2, 3, 4, 5, 6 ]
+// mergeSort descending
+// [ 6, 5, 4, 3, 2, 1 ]
