@@ -21,5 +21,5 @@ function solution(A, B) {
     return answer;
 }
 
-console.log(solution(5, 7));
-console.log(solution(29, 15));
+console.log(solution(5, 7)); // 1
+console.log(solution(29, 15)); // 2
