@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        border-bottom: 1px solid black;
+      }
+
+      .crumbs ol {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .crumb {
+        display: inline-block;
+      }
+
+      .crumb a::after {
+        display: inline-block;
+        color: #000;
+        content: ">";
+        font-size: 80%;
+        font-weight: bold;
+        padding: 0 3px;
+      }
+
+      aside {
+        width: 40%;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
+        float: right;
+        box-shadow: inset 5px 0 5px -5px #29627e;
+        font-style: italic;
+        color: #29627e;
+      }
+
+      aside > p {
+        margin: 0.5rem;
+      }
+
+      p {
+        font-family: "Fira Sans", sans-serif;
+      }
+
+      .forecast {
+        margin: 0;
+        padding: 0.3rem;
+        background-color: #eee;
+        font: 1rem "Fira Sans", sans-serif;
+      }
+
+      .forecast > h1,
+      .day-forecast {
+        margin: 0.5rem;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+      }
+
+      .day-forecast {
+        background: right/contain content-box border-box no-repeat
+          url("/media/examples/rain.svg") white;
+      }
+
+      .day-forecast > h2,
+      .day-forecast > p {
+        margin: 0.2rem;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- non-semantic elements -->
+
+    <!-- <div>: 콘텐츠 분할 요소 -->
+    <div style="background-color: aquamarine">
+      어떤 콘텐츠든 좋습니다. &lt;p&gt;, &lt;table&gt;같이 말이죠.
+    </div>
+
+    <!-- <span>: 구문 콘텐츠 요소 -->
+    <span style="background-color: gold">Some text</span>
+
+    <!-- semantic elements -->
+
+    <!-- <header>: 상단 요소 -->
+    <header>
+      <h1>Main Page Title</h1>
+      <img src="mdn-logo.png" alt="MDN logo" />
+    </header>
+
+    <!-- <footer>: 하단 요소 -->
+    <footer>
+      <p>Copyright &copy; 2022</p>
+    </footer>
+
+    <!-- <nav>: 메뉴 요소 -->
+    <nav class="crumbs">
+      <ol>
+        <li class="crumb"><a href="#">Bikes</a></li>
+        <li class="crumb"><a href="#">BMX</a></li>
+        <li class="crumb">Jump Bike 3000</li>
+      </ol>
+    </nav>
+
+    <h1>Jump Bike 3000</h1>
+    <p>
+      This BMX bike is a solid step into the pro world. It looks as legit as it
+      rides and is built to polish your skills.
+    </p>
+
+    <!-- <aside>: 문서의 주요 내용과 간접적으로만 연관된 부분을 나타내는 요소 -->
+    <p>
+      Salamanders are a group of amphibians with a lizard-like appearance,
+      including short legs and a tail in both larval and adult forms.
+    </p>
+
+    <aside>
+      <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+    </aside>
+
+    <p>
+      Several species of salamander inhabit the temperate rainforest of the
+      Pacific Northwest, including the Ensatina, the Northwestern Salamander and
+      the Rough-skinned Newt. Most salamanders are nocturnal, and hunt for
+      insects, worms and other small creatures.
+    </p>
+
+    <!-- <main>: 문서 <body>의 주요 콘텐츠를 나타내는 요소 -->
+    <main>
+      <h1>Apples</h1>
+      <p>The apple is the pomaceous fruit of the apple tree.</p>
+
+      <article>
+        <h2>Red Delicious</h2>
+        <p>
+          These bright red apples are the most common found in many
+          supermarkets.
+        </p>
+        <p>...</p>
+        <p>...</p>
+      </article>
+
+      <article>
+        <h2>Granny Smith</h2>
+        <p>These juicy, green apples make a great filling for apple pies.</p>
+        <p>...</p>
+        <p>...</p>
+      </article>
+    </main>
+
+    <!-- <article>: 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타내는 요소 -->
+    <article class="forecast">
+      <h1>Weather forecast for Seattle</h1>
+      <article class="day-forecast">
+        <h2>03 March 2022</h2>
+        <p>Rain.</p>
+      </article>
+      <article class="day-forecast">
+        <h2>04 March 2022</h2>
+        <p>Periods of rain.</p>
+      </article>
+      <article class="day-forecast">
+        <h2>05 March 2022</h2>
+        <p>Heavy rain.</p>
+      </article>
+    </article>
+
+    <!-- <section>: 일반 구획 요소 -->
+    <h1>Choosing an Apple</h1>
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        This document provides a guide to help with the important task of
+        choosing the correct Apple.
+      </p>
+    </section>
+
+    <section>
+      <h2>Criteria</h2>
+      <p>
+        There are many different criteria to be considered when choosing an
+        Apple — size, color, firmness, sweetness, tartness...
+      </p>
+    </section>
+  </body>
+</html>
