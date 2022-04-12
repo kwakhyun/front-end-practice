@@ -12,12 +12,12 @@ CircularQueue.prototype.getBuffer = function () {
   return this.array.slice();
 };
 
-// 데이터가 비어 있는지 확인
+// 인덱스가 비어 있는지 확인
 CircularQueue.prototype.isEmpty = function () {
   return this.length === 0;
 };
 
-// 데이터가 꽉 찼는지 확인
+// 인덱스가 다 찼는지 확인
 CircularQueue.prototype.isFull = function () {
   return this.length === this.size;
 };
