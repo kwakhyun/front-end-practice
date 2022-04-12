@@ -1,4 +1,4 @@
-// Deque(Double-Ended Queue) 생성자 함수
+// Deque(Double-ended queue) 생성자 함수
 function Deque(array = []) {
   this.array = array;
 }
