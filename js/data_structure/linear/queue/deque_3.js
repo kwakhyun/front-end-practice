@@ -50,6 +50,7 @@ Deque.prototype.size = function () {
   return this.array.length;
 };
 
+// 데이터 전체 삭제
 Deque.prototype.clear = function () {
   this.array = [];
 };
