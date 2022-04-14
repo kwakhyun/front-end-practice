@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <ol>: 정렬된 목록을 나타내는 요소 -->
+    <h1>Ordered List</h1>
+    <ol>
+      <li>Mix flour, baking powder, sugar, and salt.</li>
+      <li>In another bowl, mix eggs, milk, and oil.</li>
+      <li>Stir both mixtures together.</li>
+      <li>Fill muffin tray 3/4 full.</li>
+      <li>Bake for 20 minutes.</li>
+    </ol>
+
+    <!-- <ul>: 정렬되지 않은 목록을 나타내는 요소 -->
+    <h1>Unodered List</h1>
+    <ul>
+      <li>li 요소는 목록의 항목을 나타냅니다.</li>
+      <li>반드시 정렬 목록 ol 요소, 비정렬 목록 ul 요소</li>
+      <li>혹은 menu 요소 안에 위치해야 합니다.</li>
+    </ul>
+    <ul>
+      <li>first item</li>
+      <li>
+        second item
+        <!-- Look, the closing </li> tag is not placed here -->
+        <ul>
+          <li>second item first subitem</li>
+          <li>
+            second item second subitem
+            <!-- Same for the second nested unordered list -->
+            <ul>
+              <li>second item second subitem first sub-subitem</li>
+              <li>second item second subitem second sub-subitem</li>
+              <li>second item second subitem third sub-subitem</li>
+            </ul>
+          </li>
+          <!-- Closing </li> tag for the li that contains the third unordered list -->
+          <li>second item third subitem</li>
+        </ul>
+        <!-- Here is the closing </li> tag -->
+      </li>
+      <li>third item</li>
+    </ul>
+
+    <!-- <dl>: 설명 목록을 나타내는 요소 -->
+    <h1>Description List</h1>
+    <dl>
+        <dt>Firefox</dt>
+        <dd>
+          Mozilla 재단과 수 백명의
+          자원봉사자가 개발한 무료
+          오픈소스 크로스 플랫폼
+          그래픽 웹 브라우저.
+        </dd>
+      
+        <!-- 다른 용어 및 정의 -->
+      </dl>
+      <dl>
+        <dt>Name</dt>
+        <dd>KH</dd>
+        <dt>Age</dt>
+        <dd>24</dd>
+        <dt>Birthplace</dt>
+        <dd>Republic of Korea</dd>
+      </dl>
+  </body>
+</html>
