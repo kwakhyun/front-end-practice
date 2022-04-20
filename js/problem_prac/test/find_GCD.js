@@ -21,3 +21,7 @@ function solution(A) {
 
   return result;
 }
+
+console.log(solution([2, 6, 8, 14])); // 2
+console.log(solution([3, 6, 9, 12, 15])); // 3
+
