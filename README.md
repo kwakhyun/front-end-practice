@@ -1,5 +1,7 @@
-# front-end-practice
-
+# Front-end Practice
+## HTML/CSS
+## JavaScript
+## Data structure/Algorithm
 <table>
     <tr>
         <td>
