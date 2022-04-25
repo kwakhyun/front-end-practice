@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Element</title>
+  </head>
+  <body>
+    <!-- <form>: 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타낸다. -->
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="form-example">
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="form-example">
+        <input type="submit" value="Subscribe!" />
+      </div>
+    </form>
+
+    <!-- Form which will send a GET request to the current URL -->
+    <form>
+      <label
+        >get message:
+        <input name="submitted-name" autocomplete="name" />
+      </label>
+      <button>Save</button>
+    </form>
+
+    <!-- Form which will send a POST request to the current URL -->
+    <form method="post">
+      <label
+        >post message:
+        <input name="submitted-name" autocomplete="name" />
+      </label>
+      <button>Save</button>
+    </form>
+
+    <!-- Form with fieldset, legend, and label -->
+    <form method="post">
+      <fieldset>
+        <legend>Title</legend>
+        <label><input type="radio" name="radio" /> Select me</label>
+      </fieldset>
+    </form>
+  </body>
+</html>
