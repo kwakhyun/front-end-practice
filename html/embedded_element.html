@@ -4,14 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Embedded Element</title>
   </head>
   <body>
-    <!-- img -->
-    <img src="favicon144.png" alt="MDN logo" />
-    
-    <a href="https://developer.mozilla.org">
-      <img src="favicon144.png" alt="Visit the MDN site" />
+    <!-- <img>: 이미지 삽입 요소 -->
+    <img src="content/img.png" alt="html logo" width="100px" height="100px" />
+
+    <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/img">
+      <img
+        src="content/img.png"
+        alt="Visit the MDN site"
+        width="100px"
+        height="100px"
+      />
     </a>
+
+    <!-- 래스터 이미지: JPEG, PNG, GIF, WEBP | 벡터 이미지: SVG -->
+
+    <img src="content/img.png" alt="html logo" srcset="content/img.png 2x" />
+
+    <img
+      src="content/img.png"
+      alt="html logo"
+      srcset="content/img.png 200w, content/img.png 400w"
+      sizes="(min-width: 600px) 200px, 50vw"
+    />
+
+    <!-- <video>: 비디오 삽입 요소 -->
+    <video poster="content/img.png" controls>
+      <source src="content/example.mp4" />
+    </video>
+
+    <video autoplay muted>
+      <source src="content/example.mp4" />
+      비디오를 지원하지 않는 브라우저입니다.
+    </video>
+
+    <!-- <audio>: 오디오 삽입 요소 -->
+    <figure>
+      <figcaption>Listen to the T-Rex:</figcaption>
+      <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </figure>
+
+    <audio controls>
+      <source src="myAudio.mp3" type="audio/mpeg" />
+      <source src="myAudio.ogg" type="audio/ogg" />
+      <p>
+        Your browser doesn't support HTML5 audio. Here is a
+        <a href="myAudio.mp4">link to the audio</a> instead.
+      </p>
+    </audio>
+
+    <!-- <canvas>: 그래픽 캔버스 요소 -->
+    <!--  캔버스 스크립팅 API 또는 WebGL API와 함께 사용해 그래픽과 애니메이션을 그릴 수 있다. -->
+    <canvas id="canvas" width="100" height="100">
+      캔버스의 내용을 설명하는 대체 텍스트
+    </canvas>
+    <!-- JavaScript 코드 내에서 HTMLCanvasElement.getContext()를 호출해 그리기 맥락을 얻어서 캔버스 위에 그린다.
+        
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 100, 100); -->
+
+    <!-- <iframe>: 인라인 프레임 요소 -->
+    <iframe
+      id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="300"
+      height="200"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
+    >
+    </iframe>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10644.568030499466!2d127.10243773224572!3d37.51619564061865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca50a915f665b%3A0xabeb10cd5efdfce2!2z66Gv642w7JuU65Oc7YOA7JuM!5e0!3m2!1sko!2skr!4v1650902216758!5m2!1sko!2skr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </body>
 </html>
