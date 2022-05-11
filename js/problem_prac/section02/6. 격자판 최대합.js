@@ -45,7 +45,7 @@ function solution(arr) {
   sum1 = sum2 = 0;
   for (let i = 0; i < n; i++) {
     sum1 += arr[i][i];
-    sum2 += arr[i][n - i - 1];
+    sum2 += arr[i][n - 1 - i];
   }
   answer = Math.max(answer, sum1, sum2);
 
@@ -59,4 +59,4 @@ let arr = [
   [19, 27, 29, 37, 27],
   [19, 13, 30, 13, 19],
 ];
-console.log(solution(arr));
+console.log(solution(arr)); // 155
