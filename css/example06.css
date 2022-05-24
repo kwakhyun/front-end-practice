@@ -1,4 +1,4 @@
-/* link, visited */
+/* :link, :visited */
 a:link {
   color: red;
 }
@@ -7,7 +7,7 @@ a:visited {
   color: green;
 }
 
-/* hover, active, focus */
+/* :hover, :active, :focus */
 input[type="button"]:hover {
   background-color: aquamarine;
   width: 256px;

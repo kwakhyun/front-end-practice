@@ -1,0 +1,17 @@
+/* :enabled, :disabled, :checked */
+
+input[type="text"]:enabled {
+  background-color: aquamarine;
+}
+
+input[type="text"]:disabled {
+  background-color: silver;
+}
+
+input[type="radio"]:checked {
+  outline: 2px solid blue;
+}
+
+input[type="checkbox"]:checked {
+  outline: 3px solid gold;
+}
