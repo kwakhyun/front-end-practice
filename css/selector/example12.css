@@ -1,0 +1,17 @@
+/* 상속 제어 - initial, inherit, unset */
+
+div {
+  border: 5px solid chocolate;
+  margin: 5px;
+}
+
+.parent {
+  color: green;
+  font-size: 32px;
+}
+
+.child2 {
+  /* color: initial;
+    font-size: initial; */
+  all: initial; /* div의 border 속성까지 전부 무시 */
+}

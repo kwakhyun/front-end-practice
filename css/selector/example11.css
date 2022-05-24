@@ -9,7 +9,28 @@ code ~ .red {
 }
 
 /* 그룹화 */
+p,
 span,
 code {
+  font-size: 32px;
+}
+
+/* 
+Universal Selector - 범용 선택자
+
+* { // 전체 적용
   color: blue;
 }
+
+*.red { // 전체 중 .red 클래스만 적용
+  color: blue;
+}
+
+p + * { // p 태그의 바로 아래 태그가 어떤 태그라도 적용
+  color: blue;
+}
+
+div > * { // div 태그의 모든 자식 태그에 적용
+  color: blue;
+}
+*/
