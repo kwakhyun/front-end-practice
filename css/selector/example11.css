@@ -1,0 +1,15 @@
+/* 일반 형제 선택자 결합 (~) */
+code ~ .red {
+  color: red;
+}
+
+/* 인접 형제 선택자 결합 */
+.red + div {
+  background-color: green;
+}
+
+/* 그룹화 */
+span,
+code {
+  color: blue;
+}
