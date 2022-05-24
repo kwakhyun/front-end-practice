@@ -1,0 +1,20 @@
+/* Pseudo-Class Selector 가상 클래스 선택자 */
+
+/* first-child */
+li:first-child {
+  color: green;
+}
+
+.movie:first-child {
+  background-color: beige;
+}
+
+/* last-child */
+p:last-child {
+  color: red;
+}
+
+/* nth-child */
+li:nth-child(2n) { /* 홀수 2n-1, odd | 짝수 2n, even */
+  color: blue;
+}
