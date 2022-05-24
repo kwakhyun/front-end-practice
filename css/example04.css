@@ -1,0 +1,14 @@
+/* :first-of-type */
+.movie:first-of-type {
+  color: red;
+}
+
+/* :last-of-type */
+p:last-of-type {
+  color: green;
+}
+
+/* :nth-of-type(홀수 2n-1, odd | 짝수 2n, even) */
+p:nth-of-type(2n) {
+  color: blue;
+}
