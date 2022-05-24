@@ -1,0 +1,18 @@
+/* Type Selector */
+h2 {
+  color: brown
+}
+
+/* ID Selector */
+#welcome-title {
+    color: blueviolet;
+}
+
+/* Class Selector */
+.blue {
+    color: blue;
+}
+
+.coral {
+    color: coral;
+}
