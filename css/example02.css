@@ -1,0 +1,32 @@
+/* Attribute Selector */
+
+/* [attr] */
+a[target] {
+  color: red;
+}
+
+/* [attr=value] */
+a[href="http://example.com"]
+{
+  color: royalblue;
+}
+
+input[type="submit"] {
+  background-color: aquamarine;
+}
+
+/* [attr^=value] 앞쪽 일치 */
+a[href^="http://"]
+{
+  color: red;
+}
+
+/* [attr$=value] 뒤쪽 일치 */
+a[href$=".com"] {
+  color: gold;
+}
+
+/* [attr*=value] 부분 일치 */
+a[href*="example"] {
+  color: aquamarine;
+}
