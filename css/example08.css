@@ -1,0 +1,9 @@
+/* ::before, ::after */
+
+.movie::before {
+  content: "✅";
+}
+
+.favorite::after {
+  content: "❤";
+}
