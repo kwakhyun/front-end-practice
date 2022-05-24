@@ -1,0 +1,17 @@
+/* 
+Selector Combinators - 선택자 결합
+하위, 자식, 형제 선택자, 그룹화 
+*/
+
+/* 
+ul li:first-of-type {
+  background-color: aquamarine;
+} 
+*/
+ul > li:first-of-type {
+  background-color: aquamarine;
+}
+
+#ul-list li:last-of-type {
+  background-color: gold;
+}

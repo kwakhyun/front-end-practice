@@ -1,0 +1,25 @@
+/* 
+::first-letter - 첫 글자, 
+::first-line - 첫 줄, 
+::selection - 선택 범위 
+*/
+
+/*
+.lorem::first-letter {
+  color: red;
+  font-size: 32px;
+}
+
+.lorem::before {
+  content: "Before";
+}
+*/
+
+.lorem::first-line {
+  color: red;
+  font-size: 32px;
+}
+
+.lorem::selection {
+  background-color: aquamarine;
+}
