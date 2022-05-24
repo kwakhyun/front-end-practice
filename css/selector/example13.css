@@ -1,0 +1,24 @@
+/*
+    선택자 우선순위
+
+    1. 선언된 곳
+    2. 명시도(적용 범위가 적으면 명시도가 높은 것)
+    3. 코드 위치
+
+    !important > inline style >
+    id > class/attribute/pseudo-class >
+    tag > * > inherited
+*/
+
+#id {
+    color: red;
+    font-size: 32px;
+}
+
+.class {
+    color: green;
+}
+
+div {
+    color: blue !important;
+}

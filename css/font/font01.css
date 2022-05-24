@@ -1,0 +1,12 @@
+/* font-size, font-style, font-weight */
+.text1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* font-family, line-heigth */
+.text2 {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+}
