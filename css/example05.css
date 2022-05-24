@@ -1,0 +1,15 @@
+/* :not() */
+
+/* 
+input:not(.pw){
+  background-color: aquamarine;
+} 
+
+input:not([type="submit"]) {
+  background-color: aquamarine;
+}
+*/
+
+input:not([placeholder]) {
+  background-color: aquamarine;
+}

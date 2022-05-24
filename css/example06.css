@@ -1,0 +1,27 @@
+/* link, visited */
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: green;
+}
+
+/* hover, active, focus */
+input[type="button"]:hover {
+  background-color: aquamarine;
+  width: 256px;
+}
+
+input[type="button"]:active {
+  background-color: gold;
+  height: 64px;
+}
+
+input[type="text"]:focus {
+  background-color: deeppink;
+  color: aliceblue;
+  width: 256px;
+  height: 64px;
+  font-size: 32px;
+}
