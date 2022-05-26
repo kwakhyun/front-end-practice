@@ -1,0 +1,9 @@
+/* letter-spacing, word-spacing */
+
+.text1 {
+    letter-spacing: 5px;
+}
+
+.text2 {
+    word-spacing: 5px;
+}

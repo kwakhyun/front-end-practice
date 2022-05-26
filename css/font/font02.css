@@ -1,0 +1,14 @@
+/* 단축 속성 (shorthand) */
+
+.text1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+}
+
+.text2 {
+    color: hotpink;
+    font: italic bold 24px/1.5 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,29 @@
+/* text-align */
+.block {
+  background-color: gold;
+  text-align: center;
+}
+
+.inline1 {
+  background-color: gold;
+  text-align: center; /* block 요소가 아니므로 속성 적용 안됨 */
+}
+
+.container1 {
+  background-color: gold;
+  text-align: center; /* 모두 적용됨 */
+}
+
+/* text-indent */
+.paragraph1 {
+  text-indent: 50px;
+}
+
+.container2 {
+  text-indent: 50%;
+}
+
+.inline2 {
+  background-color: gold;
+  text-indent: 50px; /* block 요소가 아니므로 속성 적용 안됨 */
+}
