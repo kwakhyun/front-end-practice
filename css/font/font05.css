@@ -1,0 +1,33 @@
+/* text-decoration */
+span {
+  font-size: 24px;
+  color: blue;
+  text-decoration: line-through underline red 2px wavy;
+}
+
+/* word-break */
+.wb {
+  width: 200px;
+  background-color: aquamarine;
+}
+
+p[lang="en"] {
+  word-break: break-all; /* 띄어쓰기 줄바꿈 무시 */
+}
+
+p[lang="ko"] {
+  word-break: keep-all; /* 띄어쓰기 단위로 줄바꿈 */
+}
+
+/* text-transform */
+.container p:nth-child(2) {
+  font-size: 24px;
+  color: tomato;
+  text-transform: uppercase;
+}
+
+.container p:nth-child(3) {
+    font-size: 24px;
+    color: tomato;
+    text-transform: capitalize;
+  }
