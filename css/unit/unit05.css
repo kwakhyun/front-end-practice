@@ -1,0 +1,23 @@
+/* 함수 표기법 - calc(), min(), max() */
+
+body {
+  margin: 0;
+}
+
+.calc {
+  background-color: antiquewhite;
+  width: calc(100% / 3);
+  height: 250px;
+}
+
+.min {
+  background-color: cornflowerblue;
+  width: min(50%, 500px);
+  height: 250px;
+}
+
+.max {
+  background-color: tomato;
+  width: max(500px, 50%);
+  height: 250px;
+}
