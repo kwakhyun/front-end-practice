@@ -1,4 +1,26 @@
 /* px */
-p {
+.px {
   font-size: 24px;
+}
+
+/* em === 부모의 font-size */
+.em-parent {
+  color: blue;
+  font-size: 2em; /* 200% */
+}
+
+.em-child {
+  color: red;
+  font-size: 0.5em;
+}
+
+/* rem === root의 font-size */
+.rem-parent {
+  color: blue;
+  font-size: 2rem;
+}
+
+.rem-child {
+  color: red;
+  font-size: 1.5rem;
 }
