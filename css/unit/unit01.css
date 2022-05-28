@@ -24,3 +24,5 @@
   color: red;
   font-size: 1.5rem;
 }
+
+/* em보다 rem이 계산도 용이하고 직관적이므로 rem을 사용하는 것이 좋다 */
