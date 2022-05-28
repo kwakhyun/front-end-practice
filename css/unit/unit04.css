@@ -1,0 +1,17 @@
+/* 상대 길이 - % */
+
+body {
+  margin: 0;
+}
+
+.parent {
+  background-color: tomato;
+  width: 50%;
+  height: 500px;
+}
+
+.child {
+  background-color: orange;
+  width: 50%;
+  height: 25%;
+}

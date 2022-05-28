@@ -1,0 +1,11 @@
+/* 상대 길이 - vmin, vmax */
+
+body {
+  margin: 0;
+}
+
+.viewport {
+  background-color: tomato;
+  width: 100vmin;
+  height: 100vmin;
+}

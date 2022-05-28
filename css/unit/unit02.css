@@ -1,4 +1,4 @@
-/* vw, vh */
+/* 상대 길이 - vw, vh */
 
 body {
   margin: 0;
@@ -6,7 +6,6 @@ body {
 
 .viewport {
   background-color: tomato;
-  
   width: 50vw;
   height: 100vh;
 }
