@@ -1,0 +1,12 @@
+/* vw, vh */
+
+body {
+  margin: 0;
+}
+
+.viewport {
+  background-color: tomato;
+  
+  width: 50vw;
+  height: 100vh;
+}
