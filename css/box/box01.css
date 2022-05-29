@@ -1,0 +1,10 @@
+/* Box Model */
+
+.box {
+  width: 400px;
+  height: 400px;
+
+  padding: 20px;
+  border: 20px solid #000;
+  margin: 20px;
+}
