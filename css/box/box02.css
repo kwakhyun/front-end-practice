@@ -1,0 +1,28 @@
+/* max-width, min-width, max-height, min-height */
+
+.box {
+  width: 50%;
+  min-width: 300px;
+  height: 300px;
+  background-color: deepskyblue;
+}
+
+#parent {
+  width: 50%;
+  height: 300px;
+  background-color: brown;
+}
+
+#child1 {
+  width: 50%;
+  max-width: 300px;
+  height: 100px;
+  background-color: beige;
+}
+
+#child2 {
+  width: 100px;
+  height: 50%;
+  min-height: 300px;
+  background-color: deeppink;
+}

@@ -8,3 +8,16 @@
   border: 20px solid #000;
   margin: 20px;
 }
+
+.block {
+  width: 200px;
+  height: 100px;
+  background-color: beige;
+}
+
+.inline {
+  /* inline 요소는 width, height 값 지정 불가 */
+  width: 200px;
+  height: 100px;
+  background-color: cadetblue;
+}
