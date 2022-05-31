@@ -1,0 +1,39 @@
+/* margin collapsing - 마진 상쇄 */
+
+body {
+  margin: 0;
+}
+
+/* 인접 형제 */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+
+  margin: 20px; /* 두 형제 요소의 위, 아래 여백이 만나 상쇄된다 */
+}
+
+/* 
+부모-자식 요소
+- 부모 블록에 border, padding inline content가 없어, 부모와 자식의 margin-top이 만나는 경우
+- 부모 블록에 border, padding inline content가 없고, 부모-자식을 분리할 height 값이 지정되지 않아
+  부모와 자식의 margin-bottom이 만나는 경우
+*/
+#parent {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+
+  margin-top: 20px;
+
+  /* padding: 10px;
+  border: 2px solid black; */
+}
+
+#child {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+
+  margin-top: 50px;
+}
