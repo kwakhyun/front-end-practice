@@ -13,12 +13,10 @@ body {
   margin: 20px; /* 두 형제 요소의 위, 아래 여백이 만나 상쇄된다 */
 }
 
-/* 
-부모-자식 요소
+/* 부모-자식 요소
 - 부모 블록에 border, padding inline content가 없어, 부모와 자식의 margin-top이 만나는 경우
 - 부모 블록에 border, padding inline content가 없고, 부모-자식을 분리할 height 값이 지정되지 않아
-  부모와 자식의 margin-bottom이 만나는 경우 
-*/
+  부모와 자식의 margin-bottom이 만나는 경우 */
 #parent {
   width: 200px;
   height: 200px;
@@ -38,8 +36,6 @@ body {
   margin-top: 50px;
 }
 
-/* 
-빈 블록 
-border, padding, content가 없고, height 또한 존재하지 않으면 해당 블록의 margin-top과 margin-bottom이 상쇄된다.
-*/
-*/
+/* 빈 블록 
+border, padding, content가 없고, height 또한 존재하지 않으면 
+해당 블록의 margin-top과 margin-bottom이 상쇄된다 */
