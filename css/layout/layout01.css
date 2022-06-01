@@ -1,0 +1,44 @@
+/* 
+Layout
+
+display - inline, block, inline-block
+
+inline 요소 : ex) span..
+- 영역의 크기가 내부 콘텐츠 크기로 정해진다
+- margin-top/bottom 은 적용되지 않는다
+- 여러 요소가 가로 배치된다
+
+block 요소 : ex) div, p, h1..
+- 영역의 크기를 width, height 속성으로 지정할 수 있다
+- width를 지정하지 않으면 가로 전체를 차지한다
+- 여러 요소가 세로 배치된다
+
+inline-block 요소 : ex) input..
+- 영역의 크기를 width, height 속성으로 지정할 수 있다
+- 여러 요소가 가로 배치된다
+*/
+
+span {
+  background-color: aqua;
+  height: 50px;
+  margin: 20px;
+  padding: 10px;
+}
+
+div {
+  background-color: yellow;
+  height: 50px;
+  margin: 20px;
+  padding: 10px;
+}
+
+input {
+  background-color: pink;
+  height: 50px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.span-display {
+  display: inline-block;
+}
