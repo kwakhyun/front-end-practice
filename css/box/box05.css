@@ -1,0 +1,43 @@
+/* padding */
+
+#parent1 {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+
+  padding: 20px;
+}
+
+#child1 {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+#parent2 {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+
+  padding: 20px 40px;
+}
+
+#child2 {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+#parent3 {
+  width: 400px;
+  height: 200px;
+  background-color: violet;
+}
+
+#child3 {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+
+  padding: 10%; /* 10% of the parent's width */
+}
