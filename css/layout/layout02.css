@@ -1,0 +1,24 @@
+/* display: none, visibility: hidden */
+
+div {
+  height: 200px;
+  border: solid;
+}
+
+.box1 {
+  background-color: coral;
+}
+
+.box2 {
+  background-color: greenyellow;
+  display: none; /* 요소가 아예 사라짐 */
+}
+
+.box3 {
+  background-color: violet;
+  visibility: hidden; /* 요소가 안보이지만 영역은 차지함 */
+}
+
+.box4 {
+  background-color: skyblue;
+}
