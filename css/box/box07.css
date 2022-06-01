@@ -1,0 +1,23 @@
+/* box-sizing */
+
+#content-box {
+  width: 500px;
+  height: 250px;
+  background-color: beige;
+
+  border: 10px solid red;
+  padding: 20px;
+
+  /* box-sizing: content-box; CSS 표준 초기 기본값으로 width, height 속성이 콘텐츠 영역만 포함 */
+}
+
+#border-box {
+  width: 500px;
+  height: 250px;
+  background-color: beige;
+
+  border: 10px solid red;
+  padding: 20px;
+
+  box-sizing: border-box; /* width, height 속성이 padding, border 속성까지 포함 */
+}
