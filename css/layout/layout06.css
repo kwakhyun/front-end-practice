@@ -1,0 +1,41 @@
+/* z-index */
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 5px solid tomato;
+  background-color: antiquewhite;
+}
+
+#box2,
+#box3,
+#box4,
+#box5,
+#box6 {
+  margin-top: -20px;
+}
+
+#box2,
+#box4,
+#box6 {
+  margin-left: 50px;
+}
+
+#box4 {
+  position: relative;
+  /* position: static(기본값)만 아니면 static(기본값)보다 위로 올라온다 */
+}
+
+#box5 {
+  position: relative;
+  /* box4, box5 둘다 position: static(기본값)이 아니므로 순서대로 box5이 위로 올라온다 */
+}
+
+#box6 {
+  position: relative;
+  z-index: -1;
+  /* 
+    z-index 값이 높으면 위로 올라가고 낮으면 뒤로 밀려난다.
+    z-index 기본값은 0이다.
+  */
+}
