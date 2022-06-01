@@ -1,0 +1,57 @@
+/* position */
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 5px solid tomato;
+  margin-left: 100px;
+}
+
+/* position: relative */
+#relative {
+  background-color: skyblue;
+
+  position: relative;
+  top: 20px;
+  left: -20px;
+}
+
+/* position: absolute */
+#absolute {
+  width: 75px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: skyblue;
+
+  position: absolute;
+  left: 50px;
+  /* 
+  position: absolute 요소는 
+  조상 중에 position: static(기본값)이 아닌 요소를 찾아 기준으로 삼고,
+  조상 중에 position: static(기본값)이 아닌 요소가 없다면 body를 기준으로 삼는다.
+  */
+}
+
+/* position: fixed */
+#fixed {
+  width: 75px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: skyblue;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* position: sticky */
+#sticky {
+  width: 75px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: skyblue;
+
+  position: sticky; /* 스크롤 되는 조상 바로 하위에서 작동한다 */
+  top: 100px;
+  left: 100px;
+}
