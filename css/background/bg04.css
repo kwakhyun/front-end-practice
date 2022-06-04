@@ -1,0 +1,27 @@
+/* background (shorthand) */
+
+/* <background-color> 사용 */
+.bg1 {
+  height: 200px;
+  background: green;
+}
+
+/* <bg-image>와 <repeat-style> 사용 */
+.bg2 {
+  height: 200px;
+  background: url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg")
+    repeat-y;
+}
+
+/* <box>와 <background-color> 사용 */
+.bg3 {
+  height: 200px;
+  background: border-box red;
+}
+
+/* 단일 이미지, 중앙 배치 및 크기 조절 */
+.bg4 {
+  height: 200px;
+  background: no-repeat center/80%
+    url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
+}
