@@ -2,7 +2,7 @@
 
 #scale {
   width: 200px;
-  transform: scale(0.5);
+  transform: scale(0.5); /* === scale(0.5, 0.5) */
 }
 
 #scaleX {

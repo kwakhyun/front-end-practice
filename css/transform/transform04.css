@@ -1,0 +1,21 @@
+/* transform: skew(x, y) */
+
+#skew1 {
+  width: 200px;
+  transform: skew(45deg); /* === skew(45deg, 0) */
+}
+
+#skew2 {
+  width: 200px;
+  transform: skewX(-45deg);
+}
+
+#skew3 {
+  width: 200px;
+  transform: skewY(60deg);
+}
+
+#skew4 {
+  width: 200px;
+  transform: skew(80deg);
+}

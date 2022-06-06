@@ -1,0 +1,22 @@
+/* transform-origin */
+
+#origin1 {
+  width: 200px;
+  margin: 100px;
+  transform: scale(1.5);
+  transform-origin: top left; /* 기본값: center */
+}
+
+#origin2 {
+  width: 200px;
+  margin: 100px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+#origin3 {
+  width: 200px;
+  margin: 100px;
+  transform: rotate(45deg);
+  /* transform-origin: bottom right; */
+}
