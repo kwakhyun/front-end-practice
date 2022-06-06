@@ -1,0 +1,16 @@
+/* transform: scale */
+
+#scale {
+  width: 200px;
+  transform: scale(0.5);
+}
+
+#scaleX {
+  width: 200px;
+  transform: scaleX(0.5);
+}
+
+#scaleY {
+  width: 200px;
+  transform: scaleY(0.5);
+}
