@@ -1,0 +1,16 @@
+/* transform: rotate() */
+
+#rotate1 {
+  width: 200px;
+  transform: rotate(90deg);
+}
+
+#rotate2 {
+  width: 200px;
+  transform: rotate(0.5turn);
+}
+
+#rotate3 {
+  width: 200px;
+  transform: rotate(-90deg) scale(0.5);
+}
