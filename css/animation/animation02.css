@@ -1,0 +1,36 @@
+/* animation-delay */
+
+div {
+  width: 100px;
+  height: 100px;
+  border: 10px solid lightgray;
+  border-radius: 40px;
+}
+
+.box1 {
+  background-color: lightcoral;
+  animation: box-animation 1s infinite;
+}
+
+.box2 {
+  background-color: lightgreen;
+  animation: box-animation 1s infinite;
+  animation-delay: 0.2s;
+}
+
+.box3 {
+  background-color: lightblue;
+  animation: box-animation 1s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes box-animation {
+  0% {
+  }
+  50% {
+    width: 200px;
+    font-size: 36px;
+  }
+  100% {
+  }
+}
