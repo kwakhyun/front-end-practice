@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .h {
+        color: white;
+        margin: 50px;
+      }
+
+      a {
+        text-decoration: none;
+        border: 1px solid tomato;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: tomato;
+        color: white;
+        font-weight: bold;
+      }
+
+      .learning-site {
+        padding: 10px 30px;
+        border: 1px solid green;
+        background-color: green;
+      }
+
+      a:hover {
+        font-size: 24px;
+      }
+
+      a:active {
+        border: 1px solid deeppink;
+        background-color: deeppink;
+      }
+
+      button {
+        border: 1px solid royalblue;
+        background-color: royalblue;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+    </style>
+    <script>
+      function changeColor() {
+        document.getElementById("bg-color").style.backgroundColor = "#A9CCE3";
+      }
+    </script>
+  </head>
+  <body id="bg-color" onload="alert('Hi~😄')">
+    <button type="button" onclick="changeColor()">배경색 바꾸기</button>
+
+    <h1 class="h">HTML 기초</h1>
+    <a href="./text_element.html">텍스트 요소</a>
+    <a href="./content_element.html">구조를 나타내는 요소</a>
+    <a href="./list_element.html">목록과 표 요소</a>
+    <a href="./embedded_element.html">임베디드 요소</a>
+    <a href="./form_element.html">폼 관련 요소</a>
+    <br />
+
+    <h2 class="h">추천 HTML 학습 사이트</h2>
+    <a class="learning-site" href="https://opentutorials.org/course/3084"
+      >생활코딩</a
+    >
+    <a class="learning-site" href="http://www.tcpschool.com/html/intro"
+      >TCP School</a
+    >
+    <br />
+
+    <h2 class="h">강의 맛보기</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/MLXlXCwA0T4"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <br />
+
+    <h2 class="h">공부할 때 듣기 좋은 음악</h2>
+    <audio controls>
+      <source src="myAudio.mp3" type="audio/mpeg" />
+      <source src="myAudio.ogg" type="audio/ogg" />
+      <p>
+        Your browser doesn't support HTML5 audio. Here is a
+        <a href="myAudio.mp4">link to the audio</a> instead.
+      </p>
+    </audio>
+  </body>
+</html>
