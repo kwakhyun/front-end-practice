@@ -1,0 +1,14 @@
+/* Flexbox */
+
+.container {
+  border: 5px dashed tomato;
+
+  display: flex; /* 1차원 정렬 */
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 3px solid blue;
+}
