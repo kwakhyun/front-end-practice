@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      a {
+        padding: 10px;
+        margin: 10px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color: tomato;
+      }
+
+      a:active {
+        background-color: deeppink;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      function addText() {
+        document.getElementById("text1").innerText =
+          "자바스크립트로 생성한 텍스트입니다!";
+      }
+      function changeText() {
+        document.getElementById("text2").innerText =
+          "자바스크립트로 변경한 텍스트입니다!";
+      }
+    </script>
+  </head>
+  <body onload="alert('안녕하세요!')">
+    <h1>나의 홈페이지</h1>
+    <nav>
+      <a href="메뉴1.html">메뉴1</a>
+      <a href="메뉴2.html">메뉴2</a>
+      <a href="메뉴3.html">메뉴3</a>
+    </nav>
+    <br />
+    <section>
+      <img src="content/img.png" alt="사진1" width="200" height="200" />
+      <br />
+      <button type="button" onclick="addText()">텍스트 생성 버튼</button>
+      <p id="text1"></p>
+      <button type="button" onclick="changeText()">텍스트 바꾸기</button>
+      <p id="text2">바꾸기 전 텍스트입니다</p>
+    </section>
+  </body>
+</html>
