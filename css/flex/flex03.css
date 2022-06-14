@@ -1,0 +1,44 @@
+/* flex-wrap */
+.container1 {
+  border: 5px dashed red;
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap; /* 기본값 */
+}
+
+.container2 {
+  border: 5px dashed red;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container3 {
+  border: 5px dashed red;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+/* flex-flow */
+.container4 {
+  border: 5px dashed red;
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.container5 {
+  border: 5px dashed red;
+  height: 400px;
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: lightblue;
+  border: 3px solid blue;
+}
