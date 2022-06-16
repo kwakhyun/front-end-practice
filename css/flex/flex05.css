@@ -13,7 +13,7 @@
   background-color: lightblue;
   border: 3px solid blue;
   font-size: 30px;
-  flex-grow: 1;
+  flex-grow: 1; /* 기본값: 0 */
 }
 
 .item2 {
@@ -46,7 +46,7 @@
 }
 
 .item3:nth-child(1) {
-  flex-shrink: 0;
+  flex-shrink: 0; /* 기본값: 1 */
 }
 
 .item3:nth-child(3) {
@@ -60,7 +60,7 @@
   background-color: lightblue;
   border: 3px solid blue;
   font-size: 30px;
-  flex-basis: 0;
+  flex-basis: 0; /* 기본값: auto */
 }
 
 .item4:nth-child(1) {
@@ -73,4 +73,14 @@
 
 .item4:nth-child(3) {
   flex-grow: 3;
+}
+
+/* Item - flex (shorthand) */
+.item5 {
+  height: 50px;
+  margin: 5px;
+  background-color: lightblue;
+  border: 3px solid blue;
+  font-size: 30px;
+  flex: 1; /* flex-grow: 1, flex-basis: 0 */
 }
