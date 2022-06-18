@@ -1,0 +1,38 @@
+/* Container - align-items */
+.container1 {
+  height: 400px;
+  border: 5px dashed orange;
+  display: flex;
+  align-items: stretch;
+}
+
+.container2 {
+  height: 400px;
+  border: 5px dashed orange;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container3 {
+  height: 400px;
+  border: 5px dashed orange;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.container4 {
+  height: 400px;
+  border: 5px dashed orange;
+  display: flex;
+  align-items: flex-end;
+}
+
+.item1 {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: lightblue;
+  border: 3px solid blue;
+  font-size: 30px;
+}
