@@ -1,0 +1,30 @@
+/* Grid */
+
+.container1 {
+  width: 200px;
+  border: 5px dashed tomato;
+
+  display: grid; /* block */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container2 {
+  width: 200px;
+  border: 5px dashed tomato;
+
+  display: inline-grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container3 {
+  border: 5px dashed tomato;
+
+  display: inline-grid;
+  grid-template-columns: 100px 100px 100px;
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 30px;
+}
