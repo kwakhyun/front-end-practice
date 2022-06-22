@@ -1,0 +1,35 @@
+/* grid-template-areas */
+
+.container1 {
+  width: 500px;
+  height: 500px;
+  border: 5px dashed tomato;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "h h h h h"
+    "m m m m s"
+    "f f f f f";
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+}
+
+.header {
+  grid-area: h;
+}
+
+.main {
+  grid-area: m;
+}
+
+.sidebar {
+  grid-area: s;
+}
+
+.footer {
+  grid-area: f;
+}
