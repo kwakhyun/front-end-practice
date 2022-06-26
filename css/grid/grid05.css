@@ -1,0 +1,28 @@
+/* grid-auto-rows, grid-auto-columns */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+}
+
+.grid1 {
+  /* 명시적 */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 150px;
+}
+
+.grid2 {
+  /* 명시적 */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 150px;
+
+  /* 암시적 */
+  grid-auto-columns: 50px;
+  grid-auto-rows: 100px;
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 32px;
+}
