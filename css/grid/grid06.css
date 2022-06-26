@@ -1,0 +1,46 @@
+/* grid-auto-flow */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+}
+
+.grid1 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-auto-flow: row; (기본값) */
+}
+
+.grid2 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+}
+
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-auto-flow: row; */
+  grid-auto-flow: row dense;
+}
+
+.grid4 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-auto-flow: column; */
+  grid-auto-flow: column dense;
+}
+
+.dense1 {
+  grid-column: span 3;
+}
+
+.dense2 {
+  grid-row: span 3;
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 32px;
+}
