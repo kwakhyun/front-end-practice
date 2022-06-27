@@ -20,15 +20,14 @@
 function solution(s) {
   let answer = "YES";
   s = s.toLowerCase();
-  let len = s.length;
-  for (let i = 0; i < Math.floor(len / 2); i++) {
-    if (s[i] != s[len - i - 1]) return "NO";
+  let n = s.length;
+  for (let i = 0; i < Math.floor(n / 2); i++) {
+    if (s[i] != s[n - 1 - i]) return "NO";
   }
   return answer;
 }
 
-let str = "goooG";
-console.log(solution(str)); // YES
+console.log(solution("goooG")); // YES
 
 function solution2(s) {
   let answer = "YES";
@@ -37,5 +36,5 @@ function solution2(s) {
   return answer;
 }
 
-let str2 = "gooG";
-console.log(solution2(str2)); // YES
+console.log(solution2("gooG")); // YES
+console.log(solution2("noob")); // NO

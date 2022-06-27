@@ -25,5 +25,17 @@ function solution(str) {
   return parseInt(answer);
 }
 
-let str = "g0en2T0s8eSoft";
-console.log(solution(str)); // 208
+console.log(solution("g0en2T0s8eSoft")); // 208
+console.log(solution("tge0a1h205er")); // 1205
+
+function solution2(str) {
+  let answer = 0;
+
+  for (let x of str) {
+    if (!isNaN(x)) answer = answer * 10 + Number(x);
+  }
+
+  return answer;
+}
+
+console.log(solution2("s2s5cv2d")); // 252

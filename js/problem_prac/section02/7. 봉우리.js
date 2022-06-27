@@ -42,7 +42,7 @@ function solution(arr) {
       for (let k = 0; k < 4; k++) {
         let nx = i + dx[k];
         let ny = j + dy[k];
-        if (nx >= 0 && nx < n && ny >= 0 && ny < n && arr[nx][ny] > arr[i][j]) {
+        if (nx >= 0 && nx < n && ny >= 0 && ny < n && arr[nx][ny] >= arr[i][j]) {
           flag = 0;
           break;
         }

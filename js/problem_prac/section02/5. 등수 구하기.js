@@ -30,4 +30,6 @@ function solution(arr) {
 }
 
 let arr = [87, 89, 92, 100, 76];
-console.log(solution(arr));
+console.log(solution(arr)); // [ 4, 3, 2, 1, 5 ]
+
+console.log(solution([87, 92, 92, 100, 100])); // [ 5, 3, 3, 1, 1 ]
