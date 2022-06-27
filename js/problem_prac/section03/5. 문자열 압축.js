@@ -35,5 +35,5 @@ function solution(s) {
   return answer;
 }
 
-let str = "KKHSSSSSSSE";
-console.log(solution(str)); // K2HS7E
+console.log(solution("KKHSSSSSSSE")); // K2HS7E
+console.log(solution("ABBCCCDDDDEEEEE")); // AB2C3D4E5

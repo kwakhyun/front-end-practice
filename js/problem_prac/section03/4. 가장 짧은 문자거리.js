@@ -42,5 +42,5 @@ function solution(s, c) {
   return answer;
 }
 
-let str = "teachermode";
-console.log(solution(str, "e")); // [1, 0, 1, 2, 1, 0, 1, 2, 2, 1, 0]
+console.log(solution("teachermode", "e")); // [1, 0, 1, 2, 1, 0, 1, 2, 2, 1, 0]
+console.log(solution("apple", "p")); // [ 1, 0, 0, 1, 2 ]

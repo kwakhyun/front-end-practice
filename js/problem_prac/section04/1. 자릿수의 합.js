@@ -41,3 +41,25 @@ function solution(arr) {
 
 let arr = [128, 460, 603, 40, 521, 137, 123];
 console.log(solution(arr)); // 137
+
+function solution2(arr) {
+  let answer,
+    max = Number.MIN_SAFE_INTEGER;
+
+  for (let x of arr) {
+    let sum = x
+      .toString()
+      .split("")
+      .reduce((a, b) => a + Number(b), 0);
+    if (sum > max) {
+      max = sum;
+      answer = x;
+    } else if (sum === max) {
+      if (x > answer) answer = x;
+    }
+  }
+
+  return answer;
+}
+
+console.log(solution([123, 456, 990, 189])); // 990
