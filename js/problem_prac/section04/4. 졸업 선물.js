@@ -34,6 +34,7 @@ function solution(m, product) {
   let n = product.length;
   
   product.sort((a, b) => a[0] + a[1] - (b[0] + b[1]));
+  
   for (let i = 0; i < n; i++) {
     let money = m - (product[i][0] / 2 + product[i][1]);
     let cnt = 1;

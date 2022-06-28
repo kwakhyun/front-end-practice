@@ -31,8 +31,9 @@ function solution(n, k, card) {
       }
     }
   }
-  let a = Array.from(tmp).sort((a, b) => b - a);
-  answer = a[k - 1];
+
+  let arr = Array.from(tmp).sort((a, b) => b - a);
+  answer = arr[k - 1];
 
   return answer;
 }
