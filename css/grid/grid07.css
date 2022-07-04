@@ -1,6 +1,13 @@
-/* grid (shorthand) 
+/* 
+grid (shorthand) 
+
 명시적 - grid-template-rows, grid-template-columns, grid-template-areas
 암시적 - grid-auto-rows, grid-auto-columns, grid-auto-flow 
+
+grid: (row) / (column)
+
+(row)가 암시적이면 (column)은 명시적으로 설정되고,
+(column)이 암시적이면 (row)는 명시적으로 설정된다.
 */
 
 .container {
@@ -10,7 +17,6 @@
 
 .grid1 {
   grid: 1fr / 1fr 2fr;
-  /* grid: row / column */
 }
 
 .grid2 {
