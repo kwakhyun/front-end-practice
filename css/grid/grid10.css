@@ -1,0 +1,84 @@
+/* Item - grid-row, grid-column */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 32px;
+}
+
+.item:first-child {
+  background-color: tomato;
+}
+
+/* grid-row */
+.grid1 .item:first-child {
+  /* 
+  grid-row-start: 1;
+  grid-row-end: 3; 
+  */
+  grid-row: 1 / 3;
+}
+
+.grid2 .item:first-child {
+  grid-row: 3 / 4;
+}
+
+.grid3 .item:first-child {
+  grid-row: 1 / -1;
+}
+
+.grid4 .item:first-child {
+  grid-row: -3 / -1;
+}
+
+.grid5 .item:first-child {
+  grid-row: 1 / span 2;
+}
+
+.grid6 .item:first-child {
+  grid-row: 2 / span 2;
+}
+
+/* grid-column */
+.grid7 .item:first-child {
+  /* 
+  grid-column-start: 1;
+  grid-column-end: 3; 
+  */
+  grid-column: 1 / 3;
+}
+
+.grid8 .item:first-child {
+  grid-column: 3 / 4;
+}
+
+.grid9 .item:first-child {
+  grid-column: 1 / -1;
+}
+
+.grid10 .item:first-child {
+  grid-column: 1 / span 2;
+}
+
+/* grid-row + grid-column */
+.grid11 .item:first-child {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+}
+
+.grid12 .item:first-child {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+
+.grid13 .item:first-child {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
