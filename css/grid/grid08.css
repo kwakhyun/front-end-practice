@@ -11,7 +11,7 @@
 
 /* justify-content */
 .grid1 {
-  justify-content: center; /* start(기본값), end */
+  justify-content: center; /* default: start */
 }
 
 .grid2 {
