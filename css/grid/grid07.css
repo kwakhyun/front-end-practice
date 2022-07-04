@@ -1,0 +1,36 @@
+/* grid (shorthand) 
+명시적 - grid-template-rows, grid-template-columns, grid-template-areas
+암시적 - grid-auto-rows, grid-auto-columns, grid-auto-flow 
+*/
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+}
+
+.grid1 {
+  grid: 1fr / 1fr 2fr;
+  /* grid: row / column */
+}
+
+.grid2 {
+  grid: 200px / auto-flow;
+}
+
+.grid3 {
+  grid: auto-flow / 200px;
+}
+
+.grid4 {
+  grid: auto-flow dense / 50%;
+}
+
+.dense1 {
+  grid-column: span 3;
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 32px;
+}
