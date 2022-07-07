@@ -1,0 +1,38 @@
+/* Item - order */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 24px;
+}
+
+.grid1 .item:nth-child(5) {
+  order: -1;
+}
+.grid1 .item:nth-child(3) {
+  order: -1;
+}
+
+.grid2 {
+  grid-auto-flow: column;
+}
+.grid2 .item:nth-child(5) {
+  order: -1;
+}
+.grid2 .item:nth-child(3) {
+  order: -1;
+}
+
+.grid3 .item:nth-child(5) {
+  order: -1;
+}
+.grid3 .item:nth-child(3) {
+  order: 1;
+}
