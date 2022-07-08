@@ -1,0 +1,25 @@
+/* fr, min-content, max-content */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+}
+
+.grid1 {
+  grid-template-columns: 100px 1fr 1fr;
+}
+
+.grid2 {
+  grid-template-columns: min-content 1fr 1fr;
+}
+
+.grid3 {
+  grid-template-columns: max-content 1fr 1fr;
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 24px;
+}
