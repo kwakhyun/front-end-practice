@@ -1,0 +1,33 @@
+/* auto-fill, auto-fit */
+
+.container {
+  border: 5px dashed tomato;
+  display: grid;
+  grid-auto-rows: 100px;
+}
+
+.grid1 {
+  grid-template-columns: repeat(auto-fill, 200px);
+}
+
+.grid2 {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid3 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid4 {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid5 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.item {
+  background-color: lemonchiffon;
+  border: 3px solid yellowgreen;
+  font-size: 24px;
+}
