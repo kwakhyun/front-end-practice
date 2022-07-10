@@ -1,11 +1,31 @@
 /* Media Query */
 
-body {
+div {
   background-color: orange;
+  height: 100px;
 }
 
 @media screen and (max-width: 500px) {
-  body {
+  .div1 {
     background-color: tomato;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .div2 {
+    background-color: lime;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .div3 {
+    background-color: tomato;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .div4 {
+    background-color: tomato;
+    font-size: 24px;
   }
 }

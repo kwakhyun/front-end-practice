@@ -8,8 +8,24 @@
     <title>CSS Media Queries</title>
   </head>
   <body>
-    <h1>
-      @media screen and (max-width: 500px) { body { background-color: tomato; }}
-    </h1>
+    <div class="div1">
+      @media screen and (max-width: 500px) 
+      { .div1 { background-color: tomato; }}
+    </div>
+    <br />
+    <div class="div2">
+      @media screen and (min-width: 600px) 
+      { .div2 { background-color: lime; }}
+    </div>
+    <br />
+    <div class="div3">
+      @media screen and (min-width: 600px) and (max-width: 800px) 
+      { .div3 { background-color: green; } }
+    </div>
+    <br />
+    <div class="div4">
+      @media screen and (orientation: landscape) 
+      { .div4 { background-color: tomato; font-size: 24px; } }
+    </div>
   </body>
 </html>

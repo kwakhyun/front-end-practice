@@ -1,0 +1,8 @@
+/* min-width */
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: tomato;
+    color: white;
+  }
+}
