@@ -1,0 +1,29 @@
+/* Mobile first */
+
+body {
+  background-color: orange;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: tomato;
+  }
+  h1 {
+    font-size: 48px;
+    color: blue;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: green;
+  }
+  h1 {
+    font-size: 32px;
+    color: white;
+  }
+}
