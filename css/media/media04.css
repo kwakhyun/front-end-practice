@@ -18,6 +18,7 @@ body {
 nav {
   background-color: royalblue;
   color: white;
+  padding: 20px;
   flex-basis: 150px;
 }
 
@@ -34,9 +35,39 @@ nav {
   background-color: lightgoldenrodyellow;
   border: 2px solid tomato;
   flex-basis: 50%; /* width: 50% */
-  min-height: 200px;
+  min-height: 150px;
+  flex-grow: 1;
 }
 
 .box:nth-child(2n) {
   background-color: lightgreen;
+  border: 2px solid green;
+}
+
+footer {
+  background-color: royalblue;
+  border: 2px solid blue;
+  color: white;
+  padding: 20px;
+  min-height: 50px;
+  flex-basis: 100%; /* width: 100% */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .box-container {
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box-container {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
 }
