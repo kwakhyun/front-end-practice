@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+.container {
+  background-color: skyblue;
+  max-width: 768px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: royalblue;
+  color: white;
+}
+
+.box {
+  border: 2px solid tomato;
+}
