@@ -5,6 +5,11 @@
     return document.querySelector(target);
   };
 
+  const $todos = get(".todos");
+  const $form = get(".todo_form");
+  const $todoInput = get(".todo_input");
+  const API_URL = `http://localhost:3000/todos`;
+
   const createTodoElement = (item) => {
     const { id, content } = item;
     const $todoItem = document.createElement("div");
@@ -37,6 +42,14 @@
             </div>
       `;
     return $todoItem;
+  };
+
+  const renderAllTodos = (todos) => {
+    $todos.innerHTML = "";
+    todos.forEach((item) => {
+      const todoElement = createTodoElement(item);
+      $todos.appendChild(todoElement);
+    });
   };
 
   const init = () => {};
