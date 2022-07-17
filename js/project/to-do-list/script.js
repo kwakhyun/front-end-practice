@@ -52,6 +52,52 @@
     });
   };
 
+  const getTodos = () => {
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((todos) => {
+        renderAllTodos(todos);
+      })
+      .catch((error) => console.error(error.message));
+  };
+
+  const addTodo = (e) => {
+    e.preventDefault();
+    const content = $todoInput.value;
+    if (!content) return;
+    const todo = {
+      content,
+      completed: false,
+    };
+    fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(todo),
+    })
+      .then((response) => response.json())
+      .then(getTodos)
+      .then(() => {
+        $todoInput.value = "";
+        $todoInput.focus();
+      })
+      .catch((error) => console.error(error.message));
+  };
+
+  const toggleTodo = (e) => {
+    if (e.target.className !== "todo_checkbox") return;
+    const $item = e.target.closest(".item");
+    const id = $item.dataset.id;
+    const completed = e.target.checked;
+    fetch(`${API_URL}/${id}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ completed }),
+    })
+      .then((response) => response.json())
+      .then(getTodos)
+      .catch((error) => console.error(error.message));
+  };
+
   const init = () => {};
   init();
 })();
