@@ -4,7 +4,7 @@
   const get = (target) => {
     return document.querySelector(target);
   };
-  
+
   const getAll = (target) => {
     return document.querySelectorAll(target);
   };
@@ -215,6 +215,7 @@
   const init = () => {
     window.addEventListener("DOMContentLoaded", () => {
       getTodos();
+      pagination();
     });
 
     $form.addEventListener("submit", addTodo);
