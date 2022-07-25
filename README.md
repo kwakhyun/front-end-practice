@@ -1,7 +1,7 @@
 # Front-end Practice
 
 ### HTML / CSS / JavaScript
-<div style="display: flex;">
+<div>
         <div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png">
         </div>
@@ -16,9 +16,6 @@
 ### Data structure / Algorithm
 <table>
     <tr>
-        <td>
-        <img style="width: 256px; height: 256px;" src="https://i0.wp.com/www.primefaces.org/wp-content/uploads/2017/09/feature-react.png?ssl=1">
-        </td>
         <td>
         <img style="width: 256px; height: 256px;" src="https://www.learnsimpli.com/wp-content/uploads/2021/05/Data-structure-and-algorithms.png">
         </td>
